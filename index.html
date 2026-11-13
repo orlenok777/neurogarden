@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>НейроСад — игры для внимания и памяти</title>
+<meta name="description" content="Бесплатные красивые игры для тренировки внимания и памяти для людей старшего возраста. Ваш сад растёт с каждым занятием.">
+<meta name="theme-color" content="#3f9d5a">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/font.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body data-font="1">
+<a class="skip" href="#main">Перейти к содержанию</a>
+<header class="topbar">
+  <a href="#home" id="brand" class="brand" aria-label="НейроСад — на главную">
+    <span class="brand-logo"><svg viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="23" fill="#e9f7e1"/><path d="M24 40 C 24 30, 24 26, 24 22" stroke="#3f8a3a" stroke-width="3" stroke-linecap="round"/><path d="M24 32 C 16 28, 12 30, 11 34 C 17 36, 21 35, 24 32Z" fill="#5cae4e"/><g fill="#ff7aa8"><circle cx="24" cy="13" r="5"/><circle cx="17" cy="18" r="5"/><circle cx="31" cy="18" r="5"/><circle cx="20" cy="24" r="4.5"/><circle cx="28" cy="24" r="4.5"/></g><circle cx="24" cy="19" r="4" fill="#ffd166"/></svg></span>
+    <span class="brand-text"><b>НейроСад</b><small>Инициатива Романа Левингарда</small></span>
+  </a>
+  <nav class="nav" aria-label="Главное меню">
+    <a href="#home" data-page="home">Мой сад</a>
+    <a href="#games" data-page="games">Все игры</a>
+    <a href="#progress" data-page="progress">Мой прогресс</a>
+    <a href="#pro" data-page="pro">Для специалиста</a>
+  </nav>
+  <div class="top-actions">
+    <button class="btn ghost" id="settingsBtn" aria-label="Настройки: шрифт, звук, контраст"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h10M18 7h2M4 17h4M12 17h8" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><circle cx="16" cy="7" r="2.6" fill="none" stroke="currentColor" stroke-width="2.4"/><circle cx="10" cy="17" r="2.6" fill="none" stroke="currentColor" stroke-width="2.4"/></svg><span class="hide-sm">Настройки</span></button>
+    <button class="btn ghost menu-btn" id="menuBtn" aria-label="Меню"><svg class="ic" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="2.6" stroke-linecap="round"/></svg></button>
+  </div>
+</header>
+
+<aside class="settings" aria-label="Настройки">
+  <div class="settings-head"><h2>Настройки</h2><button class="btn ghost" id="settingsClose" aria-label="Закрыть">✕</button></div>
+  <button class="set-btn" id="btnFont"><span class="set-ic">Аа</span><span class="lbl">Шрифт</span></button>
+  <button class="set-btn" id="btnContrast"><span class="set-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg></span><span class="lbl">Контраст</span></button>
+  <button class="set-btn" id="btnSound"><span class="set-ic"><svg viewBox="0 0 24 24"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 9c1.5 1.5 1.5 4.5 0 6M18.5 6.5c3 3 3 8 0 11" stroke="currentColor" stroke-width="2.2" fill="none" stroke-linecap="round"/></svg></span><span class="lbl">Звук</span></button>
+  <button class="set-btn" id="btnMotion"><span class="set-ic"><svg viewBox="0 0 24 24"><path d="M3 12c3-5 6-5 9 0s6 5 9 0" stroke="currentColor" stroke-width="2.6" fill="none" stroke-linecap="round"/></svg></span><span class="lbl">Движение</span></button>
+  <button class="set-btn" id="btnTimer"><span class="set-ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M12 13V9M10 3h4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span><span class="lbl">Таймер</span></button>
+  <button class="set-btn" id="btnPrivate"><span class="set-ic"><svg viewBox="0 0 24 24"><path d="M5 4h11l3 3v13H5z" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/><rect x="8" y="4" width="7" height="5" fill="currentColor"/><rect x="8" y="13" width="8" height="5" rx="1" fill="currentColor"/></svg></span><span class="lbl">Сохранение</span></button>
+  <p class="muted small">Прогресс хранится только на этом устройстве. Режим «Без сохранения» — для чужого компьютера или планшета.</p>
+</aside>
+
+<main id="main" tabindex="-1"></main>
+
+<footer class="footer">
+  <p><b>Практика внимания и памяти · Не диагностика и не лечение</b></p>
+  <p>Бесплатно, без подписки и рекламы · НейроСад — инициатива Романа Левингарда</p>
+</footer>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+<script src="js/art.js"></script>
+<script src="js/garden.js"></script>
+<script src="js/app.js"></script>
+<script src="js/engine.js"></script>
+<script src="js/games.js"></script>
+</body>
+</html>
